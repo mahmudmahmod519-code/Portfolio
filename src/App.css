@@ -1,0 +1,205 @@
+:root {
+    --color-white: #ffffff;
+    --color-dark: #1a1a1a; /* أسود فحم - يمثل العصا */
+    --color-accent: #1E90FF; /* أزرق جليدي/كهربائي - يمثل الحركة والسرعة */
+    --color-text: #333333;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+section {
+    padding: 80px 5%;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+}
+
+/*================================================
+  2. شريط التنقل (Header)
+  ================================================*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-dark);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    margin-right: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+.cta-btn {
+    background-color: var(--color-accent);
+    color: var(--color-white) !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.pagination button:active {
+  transform: translateY(0);
+}
+
+/* Style للزر النشط */
+.pagination button.active {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.pagination div {
+  padding: 10px;
+  color: #7f8c8d;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Animation للأزرار */
+.pagination button {
+  position: relative;
+  overflow: hidden;
+}
+
+.pagination button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.pagination button:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 5px;
+  }
+  
+  .pagination button {
+    padding: 8px 12px;
+    min-width: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: 3px;
+  }
+  
+  .pagination button {
+    padding: 6px 10px;
+    min-width: 35px;
+    font-size: 13px;
+  }
+  
+  .pagination div {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px 5%;
+    background-color: var(--color-dark);
+    color: #bbb;
+    font-size: 0.9rem;
+}

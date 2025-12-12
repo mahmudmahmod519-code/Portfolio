@@ -1,0 +1,21 @@
+:root {
+    --color-white: #ffffff;
+    --color-dark: #1a1a1a; /* أسود فحم - يمثل العصا */
+    --color-accent: #1E90FF; /* أزرق جليدي/كهربائي - يمثل الحركة والسرعة */
+    --color-text: #333333;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
