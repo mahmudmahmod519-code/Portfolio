@@ -1,4 +1,3 @@
-import {useState} from 'react'
 export const categores=[
     {id:0,name:'الكل'},
     {id:1,name:'التصميم والشبكات'},
@@ -6,7 +5,7 @@ export const categores=[
     {id:3,name:'تطوير الـ Backend'},
 ]
 
-export default  function Filter({handelFilter}:Function){
+export default  function Filter({handelFilter}:any){
 
     
     return(

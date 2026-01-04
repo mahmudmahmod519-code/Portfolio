@@ -71,7 +71,7 @@ export default function OneProjectPage(){
                 الأدوات والتقنيات المستخدمة
             </h2>
             <div className="tools-grid">
-                    {project.tools.map(tool=>
+                    {project.tools.map((tool:string)=>
                     <div className="tool-tag">
                         <span>{tool}</span>
                     </div>
@@ -104,7 +104,7 @@ export default function OneProjectPage(){
         </section>
     </main>
 
-    <span><i classNameName={project.iconTheam}></i></span>
+    <span><i className={project.iconTheam}></i></span>
 </>
     );
 }
