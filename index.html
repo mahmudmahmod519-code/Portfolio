@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Portfolio/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mahmoud Mossad — AI Automation & Backend Engineer" />
+    <title>dev.sys | Full-Stack & Systems Developer</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Fira Code + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pitch: '#050507',
+              surface: '#0B0C10',
+              surfaceCard: 'rgba(11, 12, 16, 0.72)',
+              surfaceBorder: 'rgba(255, 255, 255, 0.07)',
+              surfaceBorderHover: 'rgba(255, 255, 255, 0.18)',
+              zincText: '#E4E4E7',
+              mutedText: '#71717A',
+              subtleGray: '#A1A1AA',
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              mono: ['"Fira Code"', 'monospace'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 5s ease-in-out infinite',
+              'spin-slow': 'spin 20s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-12px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #050507;
+        color: #E4E4E7;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        overflow-x: hidden;
+      }
+
+      ::selection {
+        background: #27272A;
+        color: #FFFFFF;
+      }
+
+      .glass-card {
+        background: rgba(11, 12, 16, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .glass-card:hover {
+        border-color: rgba(255, 255, 255, 0.16);
+        transform: translateY(-2px);
+      }
+
+      .glass-nav {
+        background: rgba(8, 9, 12, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .grid-matrix {
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+        background-size: 48px 48px;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050507;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #27272A;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3F3F46;
+      }
+
+      section {
+        padding: 100px 5%;
+      }
+
+      @media (max-width: 768px) {
+        section {
+          padding: 70px 5%;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/Portfolio/assets/index-DP1s3xnH.js"></script>
+  </head>
+  <body class="relative min-h-screen bg-pitch text-zincText font-sans antialiased selection:bg-zinc-800 selection:text-white">
+    <!-- Interactive Subtle Radial Mouse Light Track -->
+    <div id="mouseLight" class="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300 opacity-60" style="background: radial-gradient(650px circle at 50% 50%, rgba(255, 255, 255, 0.035), transparent 80%);"></div>
+
+    <!-- Ambient subtle architectural background grid -->
+    <div class="fixed inset-0 pointer-events-none grid-matrix z-0"></div>
+
+    <div id="root"></div>
+
+  </body>
+</html>
