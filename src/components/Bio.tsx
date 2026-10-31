@@ -52,30 +52,28 @@ const Bio = () => {
           variants={staggerContainer}
         >
           <motion.div className="bio-column" variants={staggerItem}>
-            <h2>My Journey in Backend Development</h2>
+            <h2>My Journey in AI Automation & Backend</h2>
             <div className="bio-text">
               <p>
-                As a Computer Science student passionate about backend development, 
-                I started my journey by exploring the fundamentals of programming and 
-                system architecture. What began with simple scripts has evolved into 
-                building robust, scalable APIs and database systems.
+                I'm an AI Automation & Backend Engineer based in Ismailia, Egypt, 
+                currently working at <strong>Tawiq</strong>, a tech startup 
+                specializing in workflow automation and AI Agents for the Saudi and MENA markets.
               </p>
               <p>
-                My technical philosophy centers around clean architecture, efficient 
-                algorithms, and maintainable code. I believe in building systems that 
-                are not just functional but also scalable, secure, and well-documented. 
-                Each project is an opportunity to solve real problems through elegant 
-                technical solutions.
+                My journey started with a passion for clean code and reliable systems. 
+                I built my foundation with Node.js/Express and Python, then expanded 
+                into AI agent pipelines, n8n workflow orchestration, and LLM integrations 
+                (OpenAI & Gemini).
               </p>
               <p>
-                When I'm not coding, you'll find me contributing to open-source projects, 
-                reading about system design patterns, or experimenting with new backend 
-                technologies to expand my technical toolkit.
+                At Tawiq, I engineer automation workflows that handle 50+ rider complaints 
+                daily via Telegram with 95% classification accuracy, set up automatic PDF 
+                report delivery saving 90% of manual reporting time, and designed n8n 
+                workflows that auto-scale with rider spikes at zero extra infrastructure cost.
               </p>
               <p>
-                Currently, I'm focused on mastering Nest.js and microservices architecture 
-                while working on projects that challenge my problem-solving abilities and 
-                push me to become a better backend developer.
+                I believe in building production-ready, maintainable systems — from RESTful 
+                APIs with JWT auth to multi-agent AI pipelines with Redis-backed memory.
               </p>
             </div>
           </motion.div>
@@ -90,18 +88,18 @@ const Bio = () => {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               <div className="stat-icon">
-                <span className="material-symbols-outlined">api</span>
+                <span className="material-symbols-outlined">automation</span>
               </div>
-              <span className="stat-label">APIs Built</span>
+              <span className="stat-label">n8n Workflows</span>
               <motion.span 
                 className="stat-value"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 200, delay: 0.3 }}
               >
-                15+
+                10+
               </motion.span>
-              <span className="stat-description">REST & Database APIs</span>
+              <span className="stat-description">Automation Workflows</span>
             </motion.div>
             
             <motion.div 
@@ -113,18 +111,18 @@ const Bio = () => {
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <div className="stat-icon">
-                <span className="material-symbols-outlined">database</span>
+                <span className="material-symbols-outlined">psychology</span>
               </div>
-              <span className="stat-label">Projects Completed</span>
+              <span className="stat-label">AI Agents</span>
               <motion.span 
                 className="stat-value"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 200, delay: 0.4 }}
               >
-                8+
+                3+
               </motion.span>
-              <span className="stat-description">Backend & Full-Stack</span>
+              <span className="stat-description">Multi-Agent Systems</span>
             </motion.div>
             
             <motion.div 
@@ -138,16 +136,16 @@ const Bio = () => {
               <div className="stat-icon">
                 <span className="material-symbols-outlined">code</span>
               </div>
-              <span className="stat-label">GitHub Contributions</span>
+              <span className="stat-label">Complaints/Day</span>
               <motion.span 
                 className="stat-value"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 200, delay: 0.5 }}
               >
-                500+
+                50+
               </motion.span>
-              <span className="stat-description">Active Development</span>
+              <span className="stat-description">Via Telegram (n8n)</span>
             </motion.div>
 
             <motion.div 
@@ -161,16 +159,16 @@ const Bio = () => {
               <div className="stat-icon">
                 <span className="material-symbols-outlined">school</span>
               </div>
-              <span className="stat-label">Academic Focus</span>
+              <span className="stat-label">Education</span>
               <motion.span 
                 className="stat-value"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 200, delay: 0.6 }}
               >
-                CS Student
+                BSc CS
               </motion.span>
-              <span className="stat-description">Backend Specialization</span>
+              <span className="stat-description">Suez Canal University</span>
             </motion.div>
           </motion.div>
         </motion.div>

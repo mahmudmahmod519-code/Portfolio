@@ -1,30 +1,30 @@
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Tools from './Tools';
-import Projects from './Projects';
-import Home from './Home';
-// import Dashboard from './DashBoard';
-import OneProjectPage from './OneProjectPage';
-
-import { Route,Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import Skills from './pages/Skills'
+import Projects from './pages/Projects'
+import Terminal from './pages/Terminal'
 
 export default function App() {
   return (
-  <>
-  <Header/>
+    <>
+      <Header />
 
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/tools" element={<Tools />} />
-      {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+      <main className="relative z-10 pt-28 pb-20 max-w-6xl mx-auto px-5 sm:px-8 space-y-32">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/terminal" element={<Terminal />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
 
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/projects/:id" element={<OneProjectPage />} />
-    </Routes>
-  
-  <Footer />
-  </>
-  );
+      <Footer />
+    </>
+  )
 }
-
