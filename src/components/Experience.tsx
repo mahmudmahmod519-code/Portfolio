@@ -1,6 +1,5 @@
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
-import { ScrollReveal } from './ui/scroll-reveal';
 
 interface TimelineItem {
   id: string;
@@ -10,6 +9,7 @@ interface TimelineItem {
   company: string;
   description: string;
   isActive?: boolean;
+  highlights?: string[];
 }
 
 const Experience = () => {
@@ -194,7 +194,7 @@ const Experience = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {exp.highlights.map((highlight, idx) => (
+                    {exp.highlights?.map((highlight, idx) => (
                       <div key={idx} className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#1E90FF] mt-1.5 flex-shrink-0" />
                         <span className="text-sm text-gray-700 leading-relaxed">{highlight}</span>

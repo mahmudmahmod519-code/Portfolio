@@ -1,9 +1,9 @@
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import { asset } from '../lib/asset'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const location = useLocation()
 
   const navLinks = [
     { to: '/about', label: '/about' },
@@ -12,8 +12,6 @@ export default function Header() {
     { to: '/terminal', label: '/terminal' },
     { to: '/contact', label: '/contact' }
   ]
-
-  const isActive = (path: string) => location.pathname === path
 
   return (
     <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4">
@@ -61,7 +59,7 @@ export default function Header() {
             <span className="text-zinc-500">$</span> cli.exec
           </a>
           <a
-            href="/mahmoud_mossad_AI%20Automation%20&%20Backend%20Engineer_resume.pdf"
+            href={asset('mahmoud_mossad_AI%20Automation%20%26%20Backend%20Engineer_resume.pdf')}
             download
             className="font-mono text-xs bg-white text-black font-semibold px-4 py-1.5 rounded-full hover:bg-zinc-200 transition-colors duration-300"
             onClick={() => setIsOpen(false)}
@@ -83,13 +81,13 @@ export default function Header() {
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-2.5 rounded-xl hover:bg-zinc-800 text-zinc-400"
-                ariaLabel="Close menu"
+                aria-label="Close menu"
               >
                 <i className="fas fa-times text-xl" />
               </button>
             </div>
             <nav className="space-y-3">
-              {navLinks.map((link, index) => (
+              {navLinks.map((link) => (
                 <NavLink
                   key={link.to}
                   to={link.to}
@@ -104,7 +102,7 @@ export default function Header() {
                 </NavLink>
               ))}
               <a
-                href="/mahmoud_mossad_AI%20Automation%20&%20Backend%20Engineer_resume.pdf"
+                href={asset('mahmoud_mossad_AI%20Automation%20%26%20Backend%20Engineer_resume.pdf')}
                 download
                 onClick={() => setIsOpen(false)}
                 className="block mt-4 px-4 py-3 rounded-xl bg-white text-black text-center font-semibold transition-colors duration-300"

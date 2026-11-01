@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 
 export default function About() {
-  const aboutRef = useRef(null)
+  const aboutRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     if (aboutRef.current) {

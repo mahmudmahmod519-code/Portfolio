@@ -1,5 +1,4 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import React from 'react';
 
 interface AuroraProps {
   from?: string;

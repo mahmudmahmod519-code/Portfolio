@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+import { Capacitor } from '@capacitor/core'
+import { App as NativeApp } from '@capacitor/app'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -9,6 +12,20 @@ import Projects from './pages/Projects'
 import Terminal from './pages/Terminal'
 
 export default function App() {
+  // Native Android back button: navigate back inside the app, exit at the root.
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return
+
+    const listener = NativeApp.addListener('backButton', ({ canGoBack }) => {
+      if (canGoBack) window.history.back()
+      else void NativeApp.exitApp()
+    })
+
+    return () => {
+      void listener.then((handle) => handle.remove())
+    }
+  }, [])
+
   return (
     <>
       <Header />

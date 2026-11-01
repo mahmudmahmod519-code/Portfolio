@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Mahmoud Mossad</string>
+    <string name="title_activity_main">Mahmoud Mossad</string>
+    <string name="package_name">com.mahmoudmossad.portfolio</string>
+    <string name="custom_url_scheme">com.mahmoudmossad.portfolio</string>
+</resources>

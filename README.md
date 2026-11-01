@@ -1,5 +1,29 @@
 # React + TypeScript + Vite
 
+## Android APK
+
+The portfolio ships as an installable Android app using [Capacitor](https://capacitorjs.com/).
+GitHub Actions builds a fresh APK on every push to `main`.
+
+**Download the latest APK:**
+https://github.com/mahmudmahmod519-code/Portfolio/releases/latest/download/mahmoud-mossad-portfolio.apk
+
+The app opens the portfolio in a WebView, so it needs an internet connection for the
+Tailwind CDN, fonts, and external assets.
+
+### Local APK build
+
+```bash
+npm ci
+npm run android:apk
+```
+
+The APK is written to `android/app/build/outputs/apk/debug/app-debug.apk`.
+Requires JDK 21 and Android SDK 36. The CI workflow lives in
+`.github/workflows/android-apk.yml`.
+
+---
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

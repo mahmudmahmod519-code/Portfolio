@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react'
+import { asset } from '../lib/asset'
 
 // ==================== HERO ====================
 const Hero = () => {
@@ -13,7 +14,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/F2qC1hT6_display.mp4" type="video/mp4" />
+          <source src={asset('F2qC1hT6_display.mp4')} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-[#050507] via-[#050507]/60 to-transparent" />
       </div>
@@ -54,7 +55,7 @@ const Hero = () => {
           {/* CTAs */}
           <div className="flex flex-wrap items-center gap-4 pt-4 font-mono text-xs">
             <a
-              href="/mahmoud_mossad_AI%20Automation%20&%20Backend%20Engineer_resume.pdf"
+              href={asset('mahmoud_mossad_AI%20Automation%20%26%20Backend%20Engineer_resume.pdf')}
               download
               className="inline-flex items-center gap-2 bg-white text-black font-semibold px-5 py-3 rounded-lg hover:bg-zinc-200 transition-all duration-200"
             >
@@ -100,7 +101,7 @@ const Hero = () => {
               {/* Hero image with transparent background */}
               <div className="relative mt-4 rounded-2xl overflow-hidden bg-black border border-white/10 aspect-[4/5] flex items-center justify-center group-hover:brightness-110 transition-all duration-700">
                 <img
-                  src="/IMG-20251030-WA0009-removebg-preview.png"
+                  src={asset('IMG-20251030-WA0009-removebg-preview.png')}
                   alt="Mahmoud Mossad - AI Automation & Backend Engineer"
                   className="w-full h-full object-contain object-center transition-all duration-700 drop-shadow-[0_0_40px_rgba(0,242,254,0.35)]"
                 />
@@ -750,6 +751,7 @@ const Contact = () => {
   const [feedback, setFeedback] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [inputValue, setInputValue] = useState('')
+  const [mosFiles, setMosFiles] = useState<string[]>([])
   const terminalRef = useRef<HTMLDivElement>(null)
   const [terminalLog, setTerminalLog] = useState<string[]>([
     '// Session initialized on secure TLS socket. Type \'help\' for command list.',
@@ -1091,7 +1093,7 @@ Location: Ismailia, Egypt &bull; Tawiq (Tech Startup) — Automation Engineer`,
                 </label>
                 <textarea
                   id="message"
-                  rows="4"
+                  rows={4}
                   required
                   placeholder="Describe project scope, scale requirements, or tech stack..."
                   className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-zinc-400 transition-colors duration-200 resize-none"

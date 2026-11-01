@@ -145,7 +145,7 @@ const Skills = () => {
 
                 <div className="flex-1 z-10 relative">
                   <div className="skill-tags flex flex-wrap gap-2 mb-6">
-                    {category.skills.map((skill, idx) => (
+                    {category.skills.map((skill) => (
                       <motion.span
                         key={skill}
                         whileHover={{ scale: 1.05, backgroundColor: category.color + '15', color: category.color }}

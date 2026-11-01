@@ -346,7 +346,7 @@ Location: Ismailia, Egypt &bull; Tawiq (Tech Startup) — Automation Engineer`,
                 </label>
                 <textarea
                   id="message"
-                  rows="4"
+                  rows={4}
                   required
                   placeholder="Describe project scope, scale requirements, or tech stack..."
                   className="w-full bg-black/60 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-zinc-400 transition-colors duration-200 resize-none"

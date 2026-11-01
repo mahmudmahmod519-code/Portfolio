@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface TypingAnimationProps {
   children?: string;
@@ -35,7 +35,6 @@ export function TypingAnimation({
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [phase, setPhase] = useState<'typing' | 'pause' | 'deleting'>('typing');
   const elementRef = useRef<HTMLSpanElement | null>(null);
-  const isInView = useInView(elementRef, { amount: 0.3, once: true });
 
   const wordsToAnimate = useMemo(
     () => words ?? (children ? [children] : []),

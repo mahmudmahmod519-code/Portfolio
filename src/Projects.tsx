@@ -118,7 +118,7 @@ export default function Projects(){
     );
 }
 
-function CardOrProject({description,name,tools,showIt,iconTheam,id,srcProject}:{
+function CardOrProject({description,name,tools,showIt,iconTheam,srcProject}:{
     id:number,
     tools:string[],
     name:string,

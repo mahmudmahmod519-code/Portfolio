@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
+import React, { useCallback, useEffect, useRef } from 'react';
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 
 interface MagicCardProps {
   children?: React.ReactNode;
@@ -18,9 +18,6 @@ export function MagicCard({
 }: MagicCardProps) {
   const mouseX = useMotionValue(-gradientSize);
   const mouseY = useMotionValue(-gradientSize);
-
-  const orbX = useSpring(mouseX, { stiffness: 250, damping: 30, mass: 0.6 });
-  const orbY = useSpring(mouseY, { stiffness: 250, damping: 30, mass: 0.6 });
 
   const modeRef = useRef('gradient');
   const gradientSizeRef = useRef(gradientSize);
